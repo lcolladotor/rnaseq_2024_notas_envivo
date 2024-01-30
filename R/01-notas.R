@@ -5,3 +5,7 @@ usethis::use_r("01-notas.R")
 
 ## Ejercicio 2
 usethis::use_r("02-visualizar-mtcars.R")
+
+## Ligar este proyecto a GitHub
+usethis::use_git()
+usethis::use_github()

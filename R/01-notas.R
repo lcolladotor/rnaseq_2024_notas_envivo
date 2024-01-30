@@ -9,3 +9,6 @@ usethis::use_r("02-visualizar-mtcars.R")
 ## Ligar este proyecto a GitHub
 usethis::use_git()
 usethis::use_github()
+
+## Notas para intro a BioC
+usethis::use_r("03-intro-Bioconductor.R")

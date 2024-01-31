@@ -15,3 +15,6 @@ usethis::use_r("03-intro-Bioconductor.R")
 
 ## Notas sobre SummarizedExperiment
 usethis::use_r("04_SummarizedExperiment.R")
+
+## Notas sobre recount3
+usethis::use_r("05_recount3.R")

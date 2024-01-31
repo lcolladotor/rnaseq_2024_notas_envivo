@@ -18,3 +18,6 @@ usethis::use_r("04_SummarizedExperiment.R")
 
 ## Notas sobre recount3
 usethis::use_r("05_recount3.R")
+
+## https://github.com/lcolladotor/rnaseq_2023_notas_en_vivo/blob/main/app.R
+usethis::use_r("app.R")

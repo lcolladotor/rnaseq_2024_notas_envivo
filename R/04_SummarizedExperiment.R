@@ -59,6 +59,8 @@ rse$Treatment[4]
 head(assay(rse, "logcounts"))
 head(assay(rse, "logcounts")["gene_1", "D"])
 
+## Usamos información de
+## https://lcolladotor.github.io/jhustatcomputing2023/posts/14-r-nuts-and-bolts/
 l <- list(
     1,
     "a"
@@ -99,5 +101,15 @@ assays(rse)[["counts"]]
 
 ## Comando 1
 rse[1:2, ]
+rownames(rse)[1:2]
+rse[c("gene_1", "gene_2"), ]
 ## Comando 2
 rse[, c("A", "D", "F")]
+rse[, c(1, 4, 6)]
+colnames(rse)[c(1, 4, 6)]
+
+## Uso de memoria
+rse2 <- rse[, c(1, 4, 6)]
+ls()
+rm(rse2)
+?gc

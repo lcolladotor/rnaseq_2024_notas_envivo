@@ -32,7 +32,10 @@ colData <- DataFrame(
 )
 ## Juntamos ahora toda la información en un solo objeto de R
 rse <- SummarizedExperiment(
-    assays = SimpleList(counts = counts),
+    assays = SimpleList(
+        counts = counts,
+        logcounts = log2(counts + 0.5)
+    ),
     rowRanges = rowRanges,
     colData = colData
 )
@@ -43,7 +46,7 @@ rse
 ## Algunos ejemplos de comandos para explorar nuestro
 ## objeto de RangedSummarizedExperiment (RSE)
 dim(rse)
-assayNames(rse)
+assayNames(rse) # identico a names(assays(rse))
 head(assay(rse))
 rowRanges(rse)
 mcols(rowRanges(rse))
@@ -53,6 +56,46 @@ colData(rse)
 colData(rse)$Treatment[4]
 rse$Treatment[4]
 
+head(assay(rse, "logcounts"))
+head(assay(rse, "logcounts")["gene_1", "D"])
+
+l <- list(
+    1,
+    "a"
+)
+class(l)
+class(l[[1]])
+class(l[[2]])
+
+v <- c(
+    1,
+    "a"
+)
+class(v)
+class(v[1])
+
+
+l2 <- list(
+    "hola" = c(1:3),
+    "adios" = letters[1:3]
+)
+data.frame(
+    "hola" = c(1:3),
+    "adios" = letters[1:3]
+)
+
+l3 <- list(
+    "hola" = c(1:4),
+    "adios" = letters[1:3]
+)
+data.frame(
+    "hola" = c(1:4),
+    "adios" = letters[1:3]
+)
+
+class(assays(rse))
+
+assays(rse)[["counts"]]
 
 ## Comando 1
 rse[1:2, ]

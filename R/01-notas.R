@@ -12,3 +12,6 @@ usethis::use_github()
 
 ## Notas para intro a BioC
 usethis::use_r("03-intro-Bioconductor.R")
+
+## Notas sobre SummarizedExperiment
+usethis::use_r("04_SummarizedExperiment.R")

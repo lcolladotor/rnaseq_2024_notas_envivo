@@ -36,3 +36,6 @@ colData(rse_gene_SRP009615)[
     ,
     grepl("^sra_attribute", colnames(colData(rse_gene_SRP009615)))
 ]
+
+## Para el ejercicio
+iSEE::iSEE(rse_gene_SRP009615, appTitle = "ejercicio recount3 SRP009615")

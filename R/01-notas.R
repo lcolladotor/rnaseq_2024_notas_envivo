@@ -24,3 +24,6 @@ usethis::use_r("app.R")
 
 ## Notas sobre ExploreModelMatrix
 usethis::use_r("06_ExploreModelMatrix.R")
+
+## Notas sobre limma
+usethis::use_r("07_limma.R")
